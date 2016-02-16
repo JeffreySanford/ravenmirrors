@@ -1,0 +1,66 @@
+@media only screen and (max-width:768px) {
+	body::before { 
+		content: "phone to some tablet media query (0 > 768) fired"; 
+		font-weight: bold; 
+		display: block; 
+		text-align: center; 
+		background: rgba(255, 0, 0, 0.9); /* Semi-transparent red */ 
+		position: absolute; 
+		bottom: 0; 
+		left: 0; 
+		right: 0; 
+		z-index: 99; 
+
+	}
+	.mobile {
+		display: inline-block;
+	}
+	.desktop {
+		display: none;
+	}
+}
+
+@media only screen and (min-width:769px) and (max-width:1281px) {                 /*tablet*/
+	body::before { 
+		content: "tablet to some desktop media query (769 > 1281) fired"; 
+		font-weight: bold; 
+		display: block; 
+		text-align: center; 
+		background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ 
+		position: absolute; 
+		bottom: 0; 
+		left: 0; 
+		right: 0; 
+		z-index: 99; 
+	}
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: inline-block;
+	}
+
+}
+
+@media only screen and (min-width:1282px) {                 /*desktop*/
+	body::before { 
+		content: "desktop (n > 1282) fired"; 
+		font-weight: bold; 
+		display: block; 
+		text-align: center; 
+		background: rgba(0, 128, 0, 0.9); /* Semi-transparent green */ 
+		position: absolute; 
+		bottom: 0; 
+		left: 0; 
+		right: 0; 
+		z-index: 99; 
+	}
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: inline-block;
+	}
+
+}
+
