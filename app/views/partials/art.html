@@ -1,11 +1,10 @@
-<h2>{{ title }} Page</h2>
 <h3 ng-if="params.catagory">{{ params }}</h3>
 <div class="mobile">
-		<div class="content-wrapper" style="width: 80%; margin: 0 auto;">
-			<div class="row">		
+		<div class="content-wrapper">
+			<div class="row">
 				<div class="col-md-8" style="text-align: center; margin-top: 10px">
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%;">
-					<div class="description" style="opacity: .8; z-index: 2; margin: -20px auto 0; background-color: black; color: white; width: 70%; padding: 5px;">
+					<img id="mobile-main-image"src="img/sample-shaman.jpg" alt="picture">
+					<div id="mobile-description">
 							<p style="text-align: left; margin: 0;">Title goes here</p>
 							<p style="font-size: .8em; text-align: left; margin: 0;">description goes here.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					</div> <!-- end overlay box -->
@@ -27,37 +26,34 @@
 			</div> <!-- end row -->
 		</div> <!-- end content-wrapper -->	
 	</div> <!-- end mobile container -->
-	<div class="desktop" style="width:100%;">
-		<div class="content-wrapper" style="width: 80%; margin: 0 auto;">
+	<div class="desktop" style="width: 100%;">
+		<div class="content-wrapper">
 			<div class="row">
 				<div class="col-sm-2 col-md-2" style="text-align: right;">
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px; margin-top: 20px;">
-					<br>
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px;">
-					<br>
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px;">
-					<br>
+					<img id="thumbnail1" class="thumbnail" ng-src="{{ thumbOne }}" alt="picture" style="margin-top: 29px;">
+					<img id="thumbnail2" class="thumbnail" ng-src="{{ thumbTwo }}" alt="picture">
+					<img id="thumbnail3" class="thumbnail" ng-src="{{ thumbThree }}" alt="picture">
+
 				</div> <!-- end left column -->
 
-				<div class="col-sm-8 col-md-8" style="text-align: center; margin-top: 30px">
-					<div class="main-image">
-						<img src="img/sample-shaman.jpg" alt="picture" style="width: 60%;">
-						<div class="description" style="opacity: .8; z-index: 2; margin: -20px auto 0; background-color: black; color: white; width: 55%; padding: 5px;">
-							<p style="text-align: left; margin: 0;">Title goes here</p>
-							<p style="font-size: .8em; text-align: left; margin: 0;">description goes here.  Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<div id="main-image-wrapper" class="col-sm-8 col-md-8">
+					<div >
+						<img id="main-image" src="" alt="picture" style="margin: 0 auto;">
+						<div id="main-image-description">
+							<p id="main-image-title"></p>
+							<p id="main-image-sub"></p>
 						</div> <!-- end overlay box -->
 					</div><!-- end main-image container -->
 				</div> <!-- end middle column -->
 				
 				<div class="col-sm-2 col-md-2" style="text-align: left;">
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px; margin-top: 20px;">
-					<br>
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px;">
-					<br>
-					<img src="img/sample-shaman.jpg" alt="picture" style="width: 80%; margin-bottom: 60px;">
+					<img id="thumbnail4" class="thumbnail" ng-src="{{ thumbFour }}" style="margin-top:20px;"  alt="picture">
+					<img id="thumbnail5" class="thumbnail" ng-src="{{ thumbFive }}" alt="picture">
+					<img id="thumbnail6" class="thumbnail" ng-src="{{ thumbSix }}" alt="picture">
 					<br>
 
 				</div> <!-- end right column -->
 			</div> <!-- end content-wrapper -->
 		</div> <!--end row -->
+		{{ art }}
 	</div> <!-- end desktop wrapper -->
